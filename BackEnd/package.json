@@ -1,0 +1,28 @@
+{
+  "name": "BackEnd",
+  "version": "1.0.0",
+  "description": "API local del taller LoraRacing",
+  "scripts": {
+    "dev": "tsx watch app/server.ts",
+    "start": "tsx app/server.ts",
+    "typecheck": "tsc --noEmit",
+    "reiniciar-clave": "tsx app/scripts/reiniciarClave.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "better-sqlite3": "^13.0.3",
+    "dotenv": "^18.0.7",
+    "express": "^5.3.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^9.6.0",
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.6.5",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}

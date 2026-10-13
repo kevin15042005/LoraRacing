@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+/* Colores de la marca (sacados del logo) y de los estados */
+@theme {
+  --color-marca: #8DC63F;          /* verde lima: botones principales */
+  --color-marca-oscuro: #4E8A1E;   /* hover y texto verde legible */
+  --color-acento: #F2E500;         /* amarillo: resaltados */
+  --color-secundario: #3A4FA3;     /* azul de las alas */
+  --color-pico: #F39A1E;           /* naranja: detalles */
+
+  --color-fondo: #F5F6F3;          /* gris casi blanco */
+  --color-superficie: #FFFFFF;     /* tarjetas */
+  --color-borde: #E2E4DE;
+  --color-texto: #1A1A1A;
+  --color-suave: #5F6359;          /* texto secundario */
+  --color-menu: #111111;           /* menú negro como el logo */
+
+  --color-agotado: #DC2626;        /* rojo */
+  --color-por-agotarse: #EAB308;   /* amarillo */
+  --color-suficiente: #16A34A;     /* verde */
+
+  --font-sans: system-ui, "Segoe UI", Roboto, sans-serif;
+}
+
+html {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background: var(--color-fondo);
+  color: var(--color-texto);
+}
+
+/* Números alineados en columnas de dinero */
+.cifras {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Impresión del comprobante: solo se ve lo que está dentro de .imprimible */
+@media print {
+  .no-imprimir {
+    display: none !important;
+  }
+  body {
+    background: white;
+  }
+  .imprimible {
+    box-shadow: none !important;
+    border: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: none !important;
+  }
+  @page {
+    margin: 12mm;
+  }
+}

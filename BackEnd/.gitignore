@@ -1,0 +1,6 @@
+node_modules
+dist
+datos/*.db*
+datos/firmas/*.png
+backup/*.db
+.env

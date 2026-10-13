@@ -1,0 +1,17 @@
+# Librerías (se instalan con pnpm install)
+node_modules/
+
+# App compilada (se crea con pnpm build)
+FrontEnd/dist/
+
+# Datos del taller: NUNCA a GitHub (clientes, ventas, firmas)
+BackEnd/datos/*.db*
+BackEnd/datos/firmas/*.png
+BackEnd/backup/*.db
+
+# Configuración local
+.env
+*.log
+
+# Íconos generados al instalar
+FrontEnd/public/logo.ico
